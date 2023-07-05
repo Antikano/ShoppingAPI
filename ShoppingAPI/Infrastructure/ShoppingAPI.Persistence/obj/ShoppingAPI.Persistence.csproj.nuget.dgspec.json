@@ -1,0 +1,191 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Infrastructure\\ShoppingAPI.Persistence\\ShoppingAPI.Persistence.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Application\\ShoppingAPI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Application\\ShoppingAPI.Application.csproj",
+        "projectName": "ShoppingAPI.Application",
+        "projectPath": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Application\\ShoppingAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\Ozzen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ozzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Domain\\ShoppingAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Domain\\ShoppingAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Domain\\ShoppingAPI.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Domain\\ShoppingAPI.Domain.csproj",
+        "projectName": "ShoppingAPI.Domain",
+        "projectPath": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Domain\\ShoppingAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\Ozzen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ozzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Infrastructure\\ShoppingAPI.Persistence\\ShoppingAPI.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Infrastructure\\ShoppingAPI.Persistence\\ShoppingAPI.Persistence.csproj",
+        "projectName": "ShoppingAPI.Persistence",
+        "projectPath": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Infrastructure\\ShoppingAPI.Persistence\\ShoppingAPI.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Ozzen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Infrastructure\\ShoppingAPI.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ozzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Application\\ShoppingAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Ozzen\\source\\githubThings\\ShoppingAPI\\ShoppingAPI\\Core\\ShoppingAPI.Application\\ShoppingAPI.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

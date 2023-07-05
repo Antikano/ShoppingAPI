@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{138E8342-AFA3-44F7-BE70-5119C6E1DA15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{64A84243-FD0D-4FE9-83F8-556A767DBDB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{6D01CF4A-4A47-44F9-B167-6920C5115678}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.Domain", "Core\ShoppingAPI.Domain\ShoppingAPI.Domain.csproj", "{33A28222-D8F5-4357-9892-555258E2BE57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.Application", "Core\ShoppingAPI.Application\ShoppingAPI.Application.csproj", "{D722C110-F566-489E-9800-4943B0FE7D6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.Infrastructure", "Infrastructure\ShoppingAPI.Infrastructure\ShoppingAPI.Infrastructure.csproj", "{6FB85410-E678-4F29-B989-E5A3BF5C54DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.Persistence", "Infrastructure\ShoppingAPI.Persistence\ShoppingAPI.Persistence.csproj", "{6DB1534F-30FD-4037-BCC9-E2124409536B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.API", "Presentation\ShoppingAPI.API\ShoppingAPI.API.csproj", "{DF869299-A256-4022-AC55-BCEE87193EB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33A28222-D8F5-4357-9892-555258E2BE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A28222-D8F5-4357-9892-555258E2BE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A28222-D8F5-4357-9892-555258E2BE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A28222-D8F5-4357-9892-555258E2BE57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D722C110-F566-489E-9800-4943B0FE7D6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D722C110-F566-489E-9800-4943B0FE7D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D722C110-F566-489E-9800-4943B0FE7D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D722C110-F566-489E-9800-4943B0FE7D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB85410-E678-4F29-B989-E5A3BF5C54DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB85410-E678-4F29-B989-E5A3BF5C54DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB85410-E678-4F29-B989-E5A3BF5C54DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB85410-E678-4F29-B989-E5A3BF5C54DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB1534F-30FD-4037-BCC9-E2124409536B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB1534F-30FD-4037-BCC9-E2124409536B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB1534F-30FD-4037-BCC9-E2124409536B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB1534F-30FD-4037-BCC9-E2124409536B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF869299-A256-4022-AC55-BCEE87193EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF869299-A256-4022-AC55-BCEE87193EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF869299-A256-4022-AC55-BCEE87193EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF869299-A256-4022-AC55-BCEE87193EB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{33A28222-D8F5-4357-9892-555258E2BE57} = {138E8342-AFA3-44F7-BE70-5119C6E1DA15}
+		{D722C110-F566-489E-9800-4943B0FE7D6D} = {138E8342-AFA3-44F7-BE70-5119C6E1DA15}
+		{6FB85410-E678-4F29-B989-E5A3BF5C54DC} = {64A84243-FD0D-4FE9-83F8-556A767DBDB2}
+		{6DB1534F-30FD-4037-BCC9-E2124409536B} = {64A84243-FD0D-4FE9-83F8-556A767DBDB2}
+		{DF869299-A256-4022-AC55-BCEE87193EB1} = {6D01CF4A-4A47-44F9-B167-6920C5115678}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {840CF438-5963-4A1F-858F-022627AA87E1}
+	EndGlobalSection
+EndGlobal

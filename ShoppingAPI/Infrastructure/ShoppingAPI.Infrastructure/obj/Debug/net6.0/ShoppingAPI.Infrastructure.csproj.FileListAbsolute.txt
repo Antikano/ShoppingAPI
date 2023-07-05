@@ -1,0 +1,17 @@
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\bin\Debug\net6.0\ShoppingAPI.Infrastructure.deps.json
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\bin\Debug\net6.0\ShoppingAPI.Infrastructure.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\bin\Debug\net6.0\ShoppingAPI.Infrastructure.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\bin\Debug\net6.0\ShoppingAPI.Application.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\bin\Debug\net6.0\ShoppingAPI.Domain.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\bin\Debug\net6.0\ShoppingAPI.Application.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\bin\Debug\net6.0\ShoppingAPI.Domain.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\ShoppingAPI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\ShoppingAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\ShoppingAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\ShoppingAPI.Infrastructure.AssemblyInfo.cs
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\ShoppingAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\ShoppingAPI.Infrastructure.csproj.CopyComplete
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\ShoppingAPI.Infrastructure.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\refint\ShoppingAPI.Infrastructure.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\ShoppingAPI.Infrastructure.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Infrastructure\obj\Debug\net6.0\ref\ShoppingAPI.Infrastructure.dll

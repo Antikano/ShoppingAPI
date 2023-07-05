@@ -1,0 +1,15 @@
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\bin\Debug\net6.0\ShoppingAPI.Application.deps.json
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\bin\Debug\net6.0\ShoppingAPI.Application.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\bin\Debug\net6.0\ShoppingAPI.Application.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\bin\Debug\net6.0\ShoppingAPI.Domain.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\bin\Debug\net6.0\ShoppingAPI.Domain.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\ShoppingAPI.Application.csproj.AssemblyReference.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\ShoppingAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\ShoppingAPI.Application.AssemblyInfoInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\ShoppingAPI.Application.AssemblyInfo.cs
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\ShoppingAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\ShoppingAPI.Application.csproj.CopyComplete
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\ShoppingAPI.Application.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\refint\ShoppingAPI.Application.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\ShoppingAPI.Application.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Application\obj\Debug\net6.0\ref\ShoppingAPI.Application.dll

@@ -1,0 +1,17 @@
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\ShoppingAPI.Persistence.csproj.AssemblyReference.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\ShoppingAPI.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\ShoppingAPI.Persistence.AssemblyInfoInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\ShoppingAPI.Persistence.AssemblyInfo.cs
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\ShoppingAPI.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\bin\Debug\net6.0\ShoppingAPI.Persistence.deps.json
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\bin\Debug\net6.0\ShoppingAPI.Persistence.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\bin\Debug\net6.0\ShoppingAPI.Persistence.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\bin\Debug\net6.0\ShoppingAPI.Application.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\bin\Debug\net6.0\ShoppingAPI.Domain.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\bin\Debug\net6.0\ShoppingAPI.Application.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\bin\Debug\net6.0\ShoppingAPI.Domain.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\ShoppingAPI.Persistence.csproj.CopyComplete
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\ShoppingAPI.Persistence.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\refint\ShoppingAPI.Persistence.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\ShoppingAPI.Persistence.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Infrastructure\ShoppingAPI.Persistence\obj\Debug\net6.0\ref\ShoppingAPI.Persistence.dll

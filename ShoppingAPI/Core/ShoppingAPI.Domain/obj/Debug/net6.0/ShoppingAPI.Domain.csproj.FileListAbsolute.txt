@@ -1,0 +1,12 @@
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\obj\Debug\net6.0\ShoppingAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\obj\Debug\net6.0\ShoppingAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\obj\Debug\net6.0\ShoppingAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\obj\Debug\net6.0\ShoppingAPI.Domain.AssemblyInfo.cs
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\obj\Debug\net6.0\ShoppingAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\bin\Debug\net6.0\ShoppingAPI.Domain.deps.json
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\bin\Debug\net6.0\ShoppingAPI.Domain.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\bin\Debug\net6.0\ShoppingAPI.Domain.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\obj\Debug\net6.0\ShoppingAPI.Domain.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\obj\Debug\net6.0\refint\ShoppingAPI.Domain.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\obj\Debug\net6.0\ShoppingAPI.Domain.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Core\ShoppingAPI.Domain\obj\Debug\net6.0\ref\ShoppingAPI.Domain.dll
