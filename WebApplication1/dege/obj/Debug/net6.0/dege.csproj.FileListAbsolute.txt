@@ -1,0 +1,12 @@
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\bin\Debug\net6.0\dege.deps.json
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\bin\Debug\net6.0\dege.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\bin\Debug\net6.0\dege.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\obj\Debug\net6.0\dege.csproj.AssemblyReference.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\obj\Debug\net6.0\dege.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\obj\Debug\net6.0\dege.AssemblyInfoInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\obj\Debug\net6.0\dege.AssemblyInfo.cs
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\obj\Debug\net6.0\dege.csproj.CoreCompileInputs.cache
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\obj\Debug\net6.0\dege.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\obj\Debug\net6.0\refint\dege.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\obj\Debug\net6.0\dege.pdb
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\WebApplication1\dege\obj\Debug\net6.0\ref\dege.dll

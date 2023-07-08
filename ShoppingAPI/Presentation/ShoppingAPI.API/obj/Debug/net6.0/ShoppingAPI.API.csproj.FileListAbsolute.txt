@@ -92,3 +92,4 @@ C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\Shopping
 C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\ShoppingAPI.API\obj\Debug\net6.0\ShoppingAPI.API.pdb
 C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\ShoppingAPI.API\obj\Debug\net6.0\ShoppingAPI.API.genruntimeconfig.cache
 C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\ShoppingAPI.API\obj\Debug\net6.0\ref\ShoppingAPI.API.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\ShoppingAPI.API\obj\Debug\net6.0\ShoppingAPI.API.MvcApplicationPartsAssemblyInfo.cs

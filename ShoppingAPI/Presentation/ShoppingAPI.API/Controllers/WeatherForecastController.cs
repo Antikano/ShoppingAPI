@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using ShoppingAPI.Application.Repositories.Prodcut;
+using ShoppingAPI.Application.Repositories.Productt;
+using ShoppingAPI.Domain.Entities;
 
 namespace ShoppingAPI.API.Controllers
 {
@@ -7,19 +8,10 @@ namespace ShoppingAPI.API.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
-        
-
         readonly private IProductRepository _productRepository;
 
-        public WeatherForecastController( IProductRepository productRepository)
+        public WeatherForecastController(IProductRepository productRepository)
         {
-          
-
             _productRepository = productRepository;
         }
 
@@ -27,8 +19,32 @@ namespace ShoppingAPI.API.Controllers
         public IActionResult GetAllProducts()
         {
             var products = _productRepository.GetAll();
+
+            if (products is null)
+                return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluþtu.");
+
             return Ok(products);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAsync(int id)
+        {
+            var product = await _productRepository.GetAsync(p => p.Id == id);
+
+            if (product is null)
+                return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluþtu.");
+
+            return Ok(product);
+        }
+
+        //[HttpGet]
+        //public async Task deneme()
+        //{
+        //    await _productRepository.AddAsync(new() {Name= "Canon EOS 80D",
+        //        Description= "Advanced DSLR camera for professional photographers",
+        //    Category= "Electronics", Stock=48, Price=1400
+        //    });
+        //}
 
     }
 }

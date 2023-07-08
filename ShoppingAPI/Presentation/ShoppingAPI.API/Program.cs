@@ -8,6 +8,12 @@ namespace ShoppingAPI.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddCors //cors
+               (options => options
+               .AddDefaultPolicy(policy => policy.AllowAnyHeader()
+               .AllowAnyMethod()
+               .AllowAnyOrigin()));
+
             // Add services to the container.
             builder.Services.AddPersistenceServices();
 
@@ -24,7 +30,7 @@ namespace ShoppingAPI.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseCors();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

@@ -12,7 +12,6 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
 {
     public class EfEntityRepositoryBase<T> : IRepository<T> 
         where T : class, new()
-       
     {
         readonly private ShoppingAPIDbContext context;
         public EfEntityRepositoryBase(ShoppingAPIDbContext _context)
@@ -30,7 +29,6 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
 
             
         }
-
         public async Task<bool> AddRangeAsync(List<T> entities)
         {
             
@@ -46,8 +44,6 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
                 return true;
             
         }
-
-
         public IQueryable<T> GetAll(Expression<Func<T, bool>> filter = null)
         {
            
@@ -61,8 +57,6 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
                 return query;
             
         }
-
-
         public async Task<T> GetAsync(Expression<Func<T, bool>> filter)
         {
             
@@ -76,8 +70,6 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
                 return await query.FirstOrDefaultAsync();
             
         }
-
-
         public bool Remove(T entity)
         {
             
@@ -92,7 +84,6 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
                 return context.SaveChanges() > 0;
             
         }
-
         public bool Remove(int id)
         {
             
@@ -107,8 +98,6 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
                 return context.SaveChanges() > 0;
             
         }
-
-
         public void Update(T entity)
         {
             

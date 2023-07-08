@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using ShoppingAPI.Application.Repositories.Prodcut;
+using ShoppingAPI.Application.Repositories.Categoryy;
+using ShoppingAPI.Application.Repositories.Productt;
 using ShoppingAPI.Persistence.Contexts;
-using ShoppingAPI.Persistence.Repositories.EntityFramework.EfProduct;
+using ShoppingAPI.Persistence.Repositories.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace ShoppingAPI.Persistence
 
 
             services.AddScoped<IProductRepository, EfProductRepository>();
+            services.AddScoped<ICategoryRepository, EfCategoryRepository>();
 
         }
 
