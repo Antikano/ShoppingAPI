@@ -14,6 +14,8 @@ namespace ShoppingAPI.Domain.DTOs
             public int Stock { get; set; }
             public decimal Price { get; set; }
             public string Description { get; set; }
+
+            public string ImageData { get; set; }
             public List<string> CategoryNames { get; set; }
             public DateTime CreatedDate { get; set; }
             public DateTime UpdatedDate { get; set; }

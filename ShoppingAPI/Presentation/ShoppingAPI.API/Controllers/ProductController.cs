@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShoppingAPI.Application.Repositories.Productt;
+using ShoppingAPI.Domain.DTOs;
 using ShoppingAPI.Domain.Entities;
 
 namespace ShoppingAPI.API.Controllers
@@ -54,6 +55,25 @@ namespace ShoppingAPI.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluştu.");
 
             return Ok(products);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(CreatedProductDto p)
+        {
+            var product = new Product
+            {
+                Name = p.Name,
+                Description = p.Description,
+                Stock = p.Stock,
+                Price = p.Price,
+                ImageData=p.ImageData
+              
+            };
+
+            await _productRepository.AddAsync(product);
+            return Ok();
+
+
         }
     }
 }

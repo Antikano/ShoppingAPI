@@ -28,6 +28,7 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
                     Name = p.Name,
                     Stock = p.Stock,
                     Price = p.Price,
+                    ImageData= p.ImageData,
                     Description = p.Description,
                     CategoryNames = p.Categories.Select(c => c.Name).ToList(),
                     CreatedDate = p.CreatedDate,
