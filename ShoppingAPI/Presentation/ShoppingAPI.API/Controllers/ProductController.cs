@@ -16,13 +16,6 @@ namespace ShoppingAPI.API.Controllers
             _productRepository = productRepository;
         }
 
-        //[HttpGet]
-        //public IActionResult Index()
-        //{
-        //    var products = _productRepository.GetAll();
-        //    return Ok(products);
-        //}
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync(int id)
         {
@@ -60,20 +53,10 @@ namespace ShoppingAPI.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(CreatedProductDto p)
         {
-            var product = new Product
-            {
-                Name = p.Name,
-                Description = p.Description,
-                Stock = p.Stock,
-                Price = p.Price,
-                ImageData=p.ImageData
-              
-            };
+             _productRepository.AddProductWithCategories(p); // bu async çalışmadı bi bak neden! kötü kod !
 
-            await _productRepository.AddAsync(product);
             return Ok();
-
-
         }
+
     }
 }

@@ -18,6 +18,8 @@ namespace ShoppingAPI.Persistence.Contexts
 
         public DbSet<Category> Categories { get; set; }
 
+        
+
 
         public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
@@ -35,6 +37,7 @@ namespace ShoppingAPI.Persistence.Contexts
 
             return await base.SaveChangesAsync(cancellationToken);
         }
+
 
 
     }

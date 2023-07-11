@@ -11,6 +11,7 @@ namespace ShoppingAPI.Application.Repositories.Productt
     public interface IProductRepository : IRepository<Product>
     {
         public IQueryable<ProductWithCategoryNamesDTO> GetProductsWithCategory();
+        public void AddProductWithCategories(CreatedProductDto p);
 
     }
 }

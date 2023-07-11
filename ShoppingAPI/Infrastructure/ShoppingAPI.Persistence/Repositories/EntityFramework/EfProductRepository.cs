@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShoppingAPI.Application.Repositories.Categoryy;
 using ShoppingAPI.Application.Repositories.Productt;
 using ShoppingAPI.Domain.DTOs;
 using ShoppingAPI.Domain.Entities;
@@ -37,5 +38,41 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
 
             return products;
         }
+
+
+        public void AddProductWithCategories(CreatedProductDto p)
+        {
+
+
+
+            var product = new Product()
+            {
+                Name = p.Name,
+                Description = p.Description,
+                Stock = p.Stock,
+                Price = p.Price,
+                ImageData = p.ImageData,
+                Categories = new List<Category>() { }
+            };
+
+
+            foreach (var item in p.categoriesName)
+            {
+                var canc = context.Categories.FirstOrDefault(c => c.Name == item);
+
+                if(canc is not null)
+                product.Categories.Add(canc);
+
+
+            }
+
+            context.Add(product);
+            context.SaveChanges();
+
+
+
+        }
+
+
     }
 }
