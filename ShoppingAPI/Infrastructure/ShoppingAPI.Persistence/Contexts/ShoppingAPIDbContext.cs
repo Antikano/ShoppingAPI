@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using ShoppingAPI.Domain.Common;
 using ShoppingAPI.Domain.Entities;
+using ShoppingAPI.Domain.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ShoppingAPI.Persistence.Contexts
 {
-    public class ShoppingAPIDbContext : DbContext
+    public class ShoppingAPIDbContext : IdentityDbContext<AppUser,AppRole,int>
     {
         public ShoppingAPIDbContext(DbContextOptions options) : base(options)
         { }
