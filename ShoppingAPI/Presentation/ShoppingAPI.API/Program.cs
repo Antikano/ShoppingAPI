@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using ShoppingAPI.Infrastructure;
 using ShoppingAPI.Persistence;
+using System.Text;
 
 namespace ShoppingAPI.API
 {
@@ -16,12 +20,27 @@ namespace ShoppingAPI.API
 
             // Add services to the container.
             builder.Services.AddPersistenceServices();
+            builder.Services.AddInfrastructureServices();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer("authScheme", options =>
+                {
+                    options.TokenValidationParameters = new()
+                    {
+                        ValidateAudience = true,
+                        ValidateIssuer = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey=true,
 
+                        ValidAudience = builder.Configuration["Token:Audience"],
+                        ValidIssuer= builder.Configuration["Token:Issuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"]))
+                    };
+                });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -32,7 +51,7 @@ namespace ShoppingAPI.API
             }
             app.UseCors();
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

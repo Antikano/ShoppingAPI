@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{6D01CF4A-4A47-44F9-B167-6920C5115678}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.Domain", "Core\ShoppingAPI.Domain\ShoppingAPI.Domain.csproj", "{33A28222-D8F5-4357-9892-555258E2BE57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingAPI.Domain", "Core\ShoppingAPI.Domain\ShoppingAPI.Domain.csproj", "{33A28222-D8F5-4357-9892-555258E2BE57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.Application", "Core\ShoppingAPI.Application\ShoppingAPI.Application.csproj", "{D722C110-F566-489E-9800-4943B0FE7D6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingAPI.Application", "Core\ShoppingAPI.Application\ShoppingAPI.Application.csproj", "{D722C110-F566-489E-9800-4943B0FE7D6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.Infrastructure", "Infrastructure\ShoppingAPI.Infrastructure\ShoppingAPI.Infrastructure.csproj", "{6FB85410-E678-4F29-B989-E5A3BF5C54DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingAPI.Infrastructure", "Infrastructure\ShoppingAPI.Infrastructure\ShoppingAPI.Infrastructure.csproj", "{6FB85410-E678-4F29-B989-E5A3BF5C54DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.Persistence", "Infrastructure\ShoppingAPI.Persistence\ShoppingAPI.Persistence.csproj", "{6DB1534F-30FD-4037-BCC9-E2124409536B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingAPI.Persistence", "Infrastructure\ShoppingAPI.Persistence\ShoppingAPI.Persistence.csproj", "{6DB1534F-30FD-4037-BCC9-E2124409536B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingAPI.API", "Presentation\ShoppingAPI.API\ShoppingAPI.API.csproj", "{DF869299-A256-4022-AC55-BCEE87193EB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingAPI.API", "Presentation\ShoppingAPI.API\ShoppingAPI.API.csproj", "{DF869299-A256-4022-AC55-BCEE87193EB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

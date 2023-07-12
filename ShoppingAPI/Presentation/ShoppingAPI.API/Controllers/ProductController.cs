@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ShoppingAPI.Application.Repositories.Productt;
 using ShoppingAPI.Domain.DTOs;
 using ShoppingAPI.Domain.Entities;
 
 namespace ShoppingAPI.API.Controllers
 {
+   
     [ApiController]
     [Route("api/[controller]")]
+    
     public class ProductController : ControllerBase
     {
         readonly private IProductRepository _productRepository;
@@ -38,7 +41,7 @@ namespace ShoppingAPI.API.Controllers
             return Ok(products);
         }
 
-
+        [Authorize(AuthenticationSchemes = "authScheme")]
         [HttpGet("withCategoryName")]
         public IActionResult GetAllProductsWithCategoryName()
         {
