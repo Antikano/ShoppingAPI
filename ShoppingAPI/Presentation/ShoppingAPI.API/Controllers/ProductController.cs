@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ShoppingAPI.Application.DTOs;
 using ShoppingAPI.Application.Repositories.Productt;
-using ShoppingAPI.Domain.DTOs;
+
 using ShoppingAPI.Domain.Entities;
 
 namespace ShoppingAPI.API.Controllers
 {
-   
+
     [ApiController]
     [Route("api/[controller]")]
     
@@ -25,7 +26,7 @@ namespace ShoppingAPI.API.Controllers
             var product = await _productRepository.GetAsync(p => p.Id == id);
 
             if (product is null)
-                return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluştu.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluştu.");        
 
             return Ok(product);
         }

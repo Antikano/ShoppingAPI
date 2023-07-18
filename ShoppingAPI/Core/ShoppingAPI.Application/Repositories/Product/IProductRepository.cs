@@ -1,4 +1,5 @@
-﻿using ShoppingAPI.Domain.DTOs;
+﻿using ShoppingAPI.Application.DTOs;
+using ShoppingAPI.Domain.DTOs;
 using ShoppingAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace ShoppingAPI.Application.Repositories.Productt
     public interface IProductRepository : IRepository<Product>
     {
         public IQueryable<ProductWithCategoryNamesDTO> GetProductsWithCategory();
-        public void AddProductWithCategories(CreatedProductDto p);
+        public void AddProductWithCategories(DTOs.CreatedProductDto p);
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShoppingAPI.Application.DTOs;
 using ShoppingAPI.Application.Repositories.Categoryy;
 using ShoppingAPI.Application.Repositories.Productt;
 using ShoppingAPI.Domain.DTOs;
@@ -9,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace ShoppingAPI.Persistence.Repositories.EntityFramework
 {

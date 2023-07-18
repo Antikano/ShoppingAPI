@@ -48,7 +48,7 @@ namespace ShoppingAPI.API.Controllers
 
             if(result.Succeeded)
             {
-                return Ok("succeeded");
+                return Ok();
             }
 
             return BadRequest();
