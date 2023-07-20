@@ -11,5 +11,9 @@ namespace ShoppingAPI.Domain.Entities.Identity
     {
         public string Name { get; set; }
         public string Surname { get; set; }
+
+
+        public ICollection<Basket> Baskets { get; set; }
+
     }
 }

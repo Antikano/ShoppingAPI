@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ShoppingAPI.Application.Abstraction.Token;
+using ShoppingAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -19,7 +20,7 @@ namespace ShoppingAPI.Infrastructure.Services.Token
             _configuration = configuration;
         }
 
-        public Application.DTOs.Token CreateAccessToken()
+        public Application.DTOs.Token CreateAccessToken(int basketID)
         {
             Application.DTOs.Token token = new();
             SymmetricSecurityKey securityKey = new(Encoding.UTF8.GetBytes(_configuration["Token:SecurityKey"]));
@@ -34,6 +35,7 @@ namespace ShoppingAPI.Infrastructure.Services.Token
                 notBefore: DateTime.UtcNow,
                 signingCredentials: signingCredentialss
                 );
+            jwtSecurityToken.Payload["basketID"] = basketID;
 
             JwtSecurityTokenHandler jwtSecurityTokenHandler = new();
 

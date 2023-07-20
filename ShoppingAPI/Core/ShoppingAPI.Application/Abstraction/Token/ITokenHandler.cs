@@ -8,6 +8,6 @@ namespace ShoppingAPI.Application.Abstraction.Token
 {
     public interface ITokenHandler
     {
-        DTOs.Token CreateAccessToken();
+        DTOs.Token CreateAccessToken(int basketID);
     }
 }

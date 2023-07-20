@@ -15,13 +15,9 @@ namespace ShoppingAPI.Persistence.Contexts
     {
         public ShoppingAPIDbContext(DbContextOptions options) : base(options)
         { }
-
         public DbSet<Product> Products { get; set; }
-
         public DbSet<Category> Categories { get; set; }
-
-        
-
+        public DbSet<Basket> Baskets { get; set; }
 
         public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

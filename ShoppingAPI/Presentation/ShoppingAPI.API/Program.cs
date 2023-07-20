@@ -12,7 +12,8 @@ namespace ShoppingAPI.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddCors //cors
+            //CORS
+            builder.Services.AddCors 
                (options => options
                .AddDefaultPolicy(policy => policy.AllowAnyHeader()
                .AllowAnyMethod()

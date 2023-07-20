@@ -15,5 +15,6 @@ namespace ShoppingAPI.Domain.Entities
         public string Description { get; set; }
         public string ImageData { get; set; }
         public ICollection<Category> Categories { get; set; }
+        public ICollection<Basket> Baskets { get; set; }
     }
 }

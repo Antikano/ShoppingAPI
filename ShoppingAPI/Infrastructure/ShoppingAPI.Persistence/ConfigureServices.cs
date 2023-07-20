@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using ShoppingAPI.Application.Repositories.Baskett;
 using ShoppingAPI.Application.Repositories.Categoryy;
 using ShoppingAPI.Application.Repositories.Productt;
 using ShoppingAPI.Domain.Entities.Identity;
@@ -34,6 +35,7 @@ namespace ShoppingAPI.Persistence
 
             services.AddScoped<IProductRepository, EfProductRepository>();
             services.AddScoped<ICategoryRepository, EfCategoryRepository>();
+            services.AddScoped<IBasketRepository, EfBasketRepository>();
 
         }
 

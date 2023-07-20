@@ -45,8 +45,6 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
         public void AddProductWithCategories(CreatedProductDto p)
         {
 
-
-
             var product = new Product()
             {
                 Name = p.Name,
@@ -57,24 +55,17 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
                 Categories = new List<Category>() { }
             };
 
-
             foreach (var item in p.categoriesName)
             {
                 var canc = context.Categories.FirstOrDefault(c => c.Name == item);
 
                 if(canc is not null)
                 product.Categories.Add(canc);
-
-
             }
 
             context.Add(product);
             context.SaveChanges();
 
-
-
         }
-
-
     }
 }
