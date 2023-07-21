@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingAPI.Application.DTOs;
+using ShoppingAPI.Application.Repositories.Categoryy;
 using ShoppingAPI.Application.Repositories.Productt;
 
 using ShoppingAPI.Domain.Entities;
@@ -14,10 +15,12 @@ namespace ShoppingAPI.API.Controllers
     public class ProductController : ControllerBase
     {
         readonly private IProductRepository _productRepository;
+        readonly private ICategoryRepository _categoryRepository;
 
-        public ProductController(IProductRepository productRepository)
+        public ProductController(IProductRepository productRepository, ICategoryRepository categoryRepository)
         {
             _productRepository = productRepository;
+            _categoryRepository = categoryRepository;
         }
 
         [HttpGet("{id}")]
@@ -57,10 +60,55 @@ namespace ShoppingAPI.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(CreatedProductDto p)
         {
-             _productRepository.AddProductWithCategories(p); // bu async çalışmadı bi bak neden! kötü kod !
-
-            return Ok();
+            try
+            {
+                await _productRepository.AddProductWithCategories(p);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+               
+                return StatusCode(500, ex.Message);
+            }
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(int id, UpdatedProductDto updatedProductDto)
+        {
+            var existingProduct = await _productRepository.GetAsync(p => p.Id == id);
+
+            if (existingProduct == null)
+            {
+                return NotFound(); 
+            }
+
+            
+            existingProduct.Name = updatedProductDto.Name;
+            existingProduct.Description = updatedProductDto.Description;
+            existingProduct.Stock = updatedProductDto.Stock;
+            existingProduct.Price = updatedProductDto.Price;
+            existingProduct.ImageData = updatedProductDto.ImageData;
+
+
+            //existingProduct.Categories.Clear(); 
+
+            //foreach (var categoryName in updatedProductDto.Categories)
+            //{
+            //    var category = await _categoryRepository.GetAsync(c => c.Name == categoryName.Name);
+
+            //    if (category != null)
+            //    {
+            //        existingProduct.Categories.Add(category);
+            //    }
+            //}
+
+
+            await _productRepository.SaveAsync();
+
+            return Ok(); 
+        }
+
+
 
     }
 }

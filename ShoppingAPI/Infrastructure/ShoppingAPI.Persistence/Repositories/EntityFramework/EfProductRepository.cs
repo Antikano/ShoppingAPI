@@ -8,6 +8,7 @@ using ShoppingAPI.Persistence.Contexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
            context= _context;
         }
 
-        public IQueryable<ProductWithCategoryNamesDTO> GetProductsWithCategory()
+        public  IQueryable<ProductWithCategoryNamesDTO> GetProductsWithCategory(Expression<Func<Product, bool>> filter = null)
         {
             var products = context.Products
                 .Select(p => new ProductWithCategoryNamesDTO
@@ -42,9 +43,8 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
         }
 
 
-        public void AddProductWithCategories(CreatedProductDto p)
+        public async Task AddProductWithCategories(CreatedProductDto p)
         {
-
             var product = new Product()
             {
                 Name = p.Name,
@@ -59,13 +59,13 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
             {
                 var canc = context.Categories.FirstOrDefault(c => c.Name == item);
 
-                if(canc is not null)
-                product.Categories.Add(canc);
+                if (canc is not null)
+                    product.Categories.Add(canc);
             }
 
-            context.Add(product);
-            context.SaveChanges();
-
+            await context.AddAsync(product);
+            await context.SaveChangesAsync();
         }
+
     }
 }

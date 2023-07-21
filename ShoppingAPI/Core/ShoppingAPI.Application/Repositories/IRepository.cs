@@ -18,5 +18,7 @@ namespace ShoppingAPI.Application.Repositories
         bool Remove(T entity);
         bool Remove(int id);
 
+        public Task<int> SaveAsync();
+
     }
 }

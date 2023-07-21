@@ -1,12 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingAPI.Application.Abstraction.Token;
 using ShoppingAPI.Application.DTOs;
 using ShoppingAPI.Application.Repositories.Baskett;
 using ShoppingAPI.Domain.DTOs;
-using ShoppingAPI.Domain.Entities;
-using ShoppingAPI.Domain.Entities.Identity;
 using ShoppingAPI.Domain.Entities.Identity;
 
 namespace ShoppingAPI.API.Controllers

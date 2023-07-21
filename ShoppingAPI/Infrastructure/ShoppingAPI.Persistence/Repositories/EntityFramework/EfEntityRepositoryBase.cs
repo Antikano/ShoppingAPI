@@ -105,5 +105,8 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
             
         }
 
+        public async Task<int> SaveAsync()
+            => await context.SaveChangesAsync();
+
     }
 }
