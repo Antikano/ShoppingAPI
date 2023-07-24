@@ -87,7 +87,7 @@ namespace ShoppingAPI.API.Controllers
             existingProduct.Description = updatedProductDto.Description;
             existingProduct.Stock = updatedProductDto.Stock;
             existingProduct.Price = updatedProductDto.Price;
-            existingProduct.ImageData = updatedProductDto.ImageData;
+            existingProduct.ImageData = updatedProductDto.imageData;
 
 
             //existingProduct.Categories.Clear(); 
@@ -104,6 +104,8 @@ namespace ShoppingAPI.API.Controllers
 
 
             await _productRepository.SaveAsync();
+
+            _productRepository.ExportToDocument();
 
             return Ok(); 
         }

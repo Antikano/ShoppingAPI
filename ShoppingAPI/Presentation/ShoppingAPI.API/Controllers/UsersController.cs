@@ -18,9 +18,9 @@ namespace ShoppingAPI.API.Controllers
         private readonly IBasketRepository _basketService;
 
         public UsersController(UserManager<AppUser> userManager
-                              ,SignInManager<AppUser> signInManager
-                              ,ITokenHandler tokenHandler
-                              ,IBasketRepository basketService)
+                              , SignInManager<AppUser> signInManager
+                              , ITokenHandler tokenHandler
+                              , IBasketRepository basketService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -38,23 +38,23 @@ namespace ShoppingAPI.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateUserDto user)
         {
-            
+
             IdentityResult result = await _userManager.CreateAsync(new()
             {
                 UserName = user.Username,
                 Email = user.Email,
-                Name= user.Firstname,
-                Surname= user.Surname
-            },user.Password);;
+                Name = user.Firstname,
+                Surname = user.Surname
+            }, user.Password); ;
 
-            if(result.Succeeded)
+            if (result.Succeeded)
             {
                 AppUser createdUser = await _userManager.FindByEmailAsync(user.Email);
 
-                bool createdBasket = await _basketService.AddAsync(new() { 
-                    User=createdUser });
-
-                
+                bool createdBasket = await _basketService.AddAsync(new()
+                {
+                    User = createdUser
+                });
 
                 return Ok();
             }
@@ -71,17 +71,18 @@ namespace ShoppingAPI.API.Controllers
             AppUser _user = await _userManager.FindByNameAsync(user.Username);
             if (_user == null) throw new Exception("kullanıcı bulunamadı");
 
-            var basketId = _basketService.GetAll(x=>x.UserId == _user.Id).FirstOrDefault();
+            var basketId = _basketService.GetAll(x => x.UserId == _user.Id).FirstOrDefault();
 
-            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.CheckPasswordSignInAsync(_user, user.Password,false);
+            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.CheckPasswordSignInAsync(_user, user.Password, false);
 
-            if(result.Succeeded) {
+            if (result.Succeeded)
+            {
                 Token token = _tokenHandler.CreateAccessToken(basketId.Id);
                 return Ok(token);
 
             }
             return BadRequest("login işlemi hata");
-            
+
         }
 
 

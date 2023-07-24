@@ -40,6 +40,19 @@ namespace ShoppingAPI.API.Controllers
             return Ok();
         }
 
+        [HttpPost]
+        public IActionResult CreateOrder(OrderDto orderDto)
+        {
+            if (orderDto is null)
+                return BadRequest();
+
+            _basketRepository.ExportToDocument(orderDto);
+
+
+
+            return Ok();
+        }
+
 
 
 

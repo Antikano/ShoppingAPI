@@ -13,5 +13,7 @@ namespace ShoppingAPI.Application.Repositories.Baskett
         public  Task<Basket> BasketWithProducts(int id);
 
         public Task updateBasket(int id, UpdatedBasketDto basket);
+
+        public void ExportToDocument(OrderDto order);
     }
 }

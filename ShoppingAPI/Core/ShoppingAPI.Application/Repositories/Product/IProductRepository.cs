@@ -15,5 +15,7 @@ namespace ShoppingAPI.Application.Repositories.Productt
         public IQueryable<ProductWithCategoryNamesDTO> GetProductsWithCategory(Expression<Func<Product, bool>> filter = null);
         public Task AddProductWithCategories(DTOs.CreatedProductDto p);
 
+        public void ExportToDocument();
+
     }
 }

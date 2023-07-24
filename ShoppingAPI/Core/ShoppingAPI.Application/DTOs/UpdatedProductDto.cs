@@ -13,7 +13,7 @@ namespace ShoppingAPI.Application.DTOs
         public int Stock { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
-        public string ImageData { get; set; }
+        public string imageData { get; set; }
         //public ICollection<Category> Categories { get; set; }
 
     }
