@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ShoppingAPI.Infrastructure;
 using ShoppingAPI.Persistence;
+using StackExchange.Redis;
 using System.Text;
 
 namespace ShoppingAPI.API
@@ -42,6 +44,11 @@ namespace ShoppingAPI.API
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"]))
                     };
                 });
+
+            //IConfiguration configuration = builder.Configuration;
+            //var multiplexer = ConnectionMultiplexer.Connect(configuration.GetConnectionString("Redis"));
+            //builder.Services.AddSingleton<IConnectionMultiplexer>(multiplexer);
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

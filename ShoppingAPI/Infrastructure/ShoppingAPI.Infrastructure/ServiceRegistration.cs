@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using ShoppingAPI.Application.Abstraction.Services;
 using ShoppingAPI.Application.Abstraction.Token;
 using ShoppingAPI.Application.ViewModel.ClosedXML;
+using ShoppingAPI.Infrastructure.Services.Caching;
 using ShoppingAPI.Infrastructure.Services.ExportToDoc;
 using ShoppingAPI.Infrastructure.Services.Token;
 using System;
@@ -19,6 +21,7 @@ namespace ShoppingAPI.Infrastructure
         {
             services.AddScoped<ITokenHandler, TokenHandler>();
             services.AddScoped<ICreWorksheet, CreWorksheet>();
+            //services.AddScoped<ICacheService, RedisCacheService>();
         }
     }
 }

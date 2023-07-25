@@ -22,7 +22,6 @@ namespace ShoppingAPI.Persistence.Contexts
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             
-
             var datas = ChangeTracker
                  .Entries<BaseEntity>();
 

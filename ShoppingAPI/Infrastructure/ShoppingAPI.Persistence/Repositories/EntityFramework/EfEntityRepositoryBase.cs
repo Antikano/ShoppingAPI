@@ -45,16 +45,16 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
         }
         public IQueryable<T> GetAll(Expression<Func<T, bool>> filter = null)
         {
-           
-                IQueryable<T> query = context.Set<T>();
 
-                if (filter != null)
-                {
-                    query = query.Where(filter);
-                }
+            IQueryable<T> query = context.Set<T>();
 
-                return query;
-            
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            return query;
+
         }
         public async Task<T> GetAsync(Expression<Func<T, bool>> filter)
         {
@@ -105,6 +105,20 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
             
         }
 
+
+        public async Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>> filter = null)
+        {
+
+            IQueryable<T> query = context.Set<T>();
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            return query;
+
+        }
         public async Task<int> SaveAsync()
             => await context.SaveChangesAsync();
 

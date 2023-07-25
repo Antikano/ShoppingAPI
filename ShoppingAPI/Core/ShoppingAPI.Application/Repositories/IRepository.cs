@@ -12,6 +12,7 @@ namespace ShoppingAPI.Application.Repositories
     {
         Task<T> GetAsync(Expression<Func<T, bool>> filter);
         IQueryable<T> GetAll(Expression<Func<T, bool>> filter = null);
+        Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>> filter = null);
         Task<bool> AddAsync(T entity);
         Task<bool> AddRangeAsync(List<T> data);
         void Update(T entity);

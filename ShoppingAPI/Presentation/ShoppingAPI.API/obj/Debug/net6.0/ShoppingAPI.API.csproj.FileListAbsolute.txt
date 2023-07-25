@@ -106,3 +106,5 @@ C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\Shopping
 C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\ShoppingAPI.API\bin\Debug\net6.0\SixLabors.Fonts.dll
 C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\ShoppingAPI.API\bin\Debug\net6.0\System.IO.Packaging.dll
 C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\ShoppingAPI.API\bin\Debug\net6.0\XLParser.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\ShoppingAPI.API\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Ozzen\source\githubThings\ShoppingAPI\ShoppingAPI\Presentation\ShoppingAPI.API\bin\Debug\net6.0\StackExchange.Redis.dll
