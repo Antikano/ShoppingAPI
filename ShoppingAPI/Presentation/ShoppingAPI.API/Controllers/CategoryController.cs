@@ -15,10 +15,11 @@ namespace ShoppingAPI.API.Controllers
         private readonly ICategoryRepository _categoryRepository;
         //private readonly ICacheService _cacheService;
 
-        public CategoryController(ICategoryRepository categoryRepository)
+        public CategoryController(ICategoryRepository categoryRepository/*, ICacheService cacheService*/)
         {
             _categoryRepository = categoryRepository;
             //_cacheService = cacheService;
+           
         }
 
         [HttpGet]

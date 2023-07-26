@@ -57,6 +57,18 @@ namespace ShoppingAPI.API.Controllers
             return Ok(products);
         }
 
+
+        //[HttpGet("withCategoryNamee")]
+        //public async Task<IActionResult> GetAllProductsWithCategoryNamee()
+        //{
+        //    var products = await _productRepository.GetProductsWithCategoryAsync();
+
+        //    if (products is null)
+        //        return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluştu.");
+
+        //    return Ok(products);
+        //}
+
         [HttpPost]
         public async Task<IActionResult> Post(CreatedProductDto p)
         {

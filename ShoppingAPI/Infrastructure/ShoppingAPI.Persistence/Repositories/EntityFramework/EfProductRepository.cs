@@ -1,5 +1,7 @@
 ﻿using ClosedXML.Excel;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using ShoppingAPI.Application.Abstraction.Services;
 using ShoppingAPI.Application.DTOs;
 using ShoppingAPI.Application.Repositories.Categoryy;
 using ShoppingAPI.Application.Repositories.Productt;
@@ -21,10 +23,12 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
     {
         readonly private ShoppingAPIDbContext context;
         readonly private ICreWorksheet _creWorksheet;
-        public EfProductRepository(ShoppingAPIDbContext _context, ICreWorksheet creWorksheet) : base(_context)
+        //readonly private ICacheService _cacheService;
+        public EfProductRepository(ShoppingAPIDbContext _context, ICreWorksheet creWorksheet/*, ICacheService cacheService*/) : base(_context)
         {
             context = _context;
             _creWorksheet = creWorksheet;
+            //_cacheService = cacheService;
         }
 
         public IQueryable<ProductWithCategoryNamesDTO> GetProductsWithCategory(Expression<Func<Product, bool>> filter = null)
@@ -113,5 +117,35 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
 
             workbook.SaveAs(filePath);
         }
+
+        //public async Task<List<ProductWithCategoryNamesDTO>> GetProductsWithCategoryAsync()
+        //{
+        //    var products = await _cacheService.GetOrAddAsync("products", async () =>
+        //    {
+        //        var dbProducts = context.Products
+        //            .Select(p => new ProductWithCategoryNamesDTO
+        //            {
+        //                Id = p.Id,
+        //                Name = p.Name,
+        //                Stock = p.Stock,
+        //                Price = p.Price,
+        //                ImageData = p.ImageData,
+        //                Description = p.Description,
+        //                CategoryNames = p.Categories.Select(c => c.Name).ToList(),
+        //                CreatedDate = p.CreatedDate,
+        //                UpdatedDate = p.UpdatedDate
+        //            });
+
+        //        return await dbProducts.ToListAsync();
+        //    });
+
+        //    if (products is null)
+        //    {
+        //        throw new NotImplementedException();
+        //    }
+
+        //    return products;
+        //}
+
     }
 }
