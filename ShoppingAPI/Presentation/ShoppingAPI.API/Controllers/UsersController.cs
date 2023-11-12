@@ -18,9 +18,9 @@ namespace ShoppingAPI.API.Controllers
         private readonly IBasketRepository _basketService;
 
         public UsersController(UserManager<AppUser> userManager
-                              , SignInManager<AppUser> signInManager
-                              , ITokenHandler tokenHandler
-                              , IBasketRepository basketService)
+                              ,SignInManager<AppUser> signInManager
+                              ,ITokenHandler tokenHandler
+                              ,IBasketRepository basketService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -28,12 +28,6 @@ namespace ShoppingAPI.API.Controllers
             _basketService = basketService;
         }
 
-        //[HttpGet] siliyor nice
-        //public async Task denemeAsync() {
-        //    var user = await _userManager.FindByIdAsync("1");
-        //   await _userManager.DeleteAsync(user);
-
-        //}
 
         [HttpPost]
         public async Task<IActionResult> Create(CreateUserDto user)

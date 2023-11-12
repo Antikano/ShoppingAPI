@@ -9,5 +9,6 @@ namespace ShoppingAPI.Application.Repositories.Categoryy
 {
     public interface ICategoryRepository: IRepository<Category>
     {
+        public List<Category> getCategoriesFromRedis();
     }
 }

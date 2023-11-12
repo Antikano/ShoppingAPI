@@ -1,20 +1,12 @@
-﻿using ClosedXML.Excel;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ShoppingAPI.Application.Abstraction.Services;
 using ShoppingAPI.Application.DTOs;
-using ShoppingAPI.Application.Repositories.Categoryy;
 using ShoppingAPI.Application.Repositories.Productt;
 using ShoppingAPI.Application.ViewModel.ClosedXML;
 using ShoppingAPI.Domain.DTOs;
 using ShoppingAPI.Domain.Entities;
 using ShoppingAPI.Persistence.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace ShoppingAPI.Persistence.Repositories.EntityFramework
@@ -33,23 +25,27 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
 
         public IQueryable<ProductWithCategoryNamesDTO> GetProductsWithCategory(Expression<Func<Product, bool>> filter = null)
         {
-            var products = context.Products
-                .Select(p => new ProductWithCategoryNamesDTO
-                {
-                    Id = p.Id,
-                    Name = p.Name,
-                    Stock = p.Stock,
-                    Price = p.Price,
-                    ImageData = p.ImageData,
-                    Description = p.Description,
-                    CategoryNames = p.Categories.Select(c => c.Name).ToList(),
-                    CreatedDate = p.CreatedDate,
-                    UpdatedDate = p.UpdatedDate
-                });
+            //var products = _cacheService.GetOrAdd<List<ProductWithCategoryNamesDTO>>("Products", () =>
+            //{
+                var productss = context.Products
+               .Select(p => new ProductWithCategoryNamesDTO
+               {
+                   Id = p.Id,
+                   Name = p.Name,
+                   Stock = p.Stock,
+                   Price = p.Price,
+                   ImageData = p.ImageData,
+                   Description = p.Description,
+                   CategoryNames = p.Categories.Select(c => c.Name).ToList(),
+                   CreatedDate = p.CreatedDate,
+                   UpdatedDate = p.UpdatedDate
+               });
 
-            return products;
+                //return productss.ToList();
+            //});
+
+            return productss;
         }
-
 
         public async Task AddProductWithCategories(CreatedProductDto p)
         {
@@ -118,34 +114,25 @@ namespace ShoppingAPI.Persistence.Repositories.EntityFramework
             workbook.SaveAs(filePath);
         }
 
-        //public async Task<List<ProductWithCategoryNamesDTO>> GetProductsWithCategoryAsync()
-        //{
-        //    var products = await _cacheService.GetOrAddAsync("products", async () =>
-        //    {
-        //        var dbProducts = context.Products
-        //            .Select(p => new ProductWithCategoryNamesDTO
-        //            {
-        //                Id = p.Id,
-        //                Name = p.Name,
-        //                Stock = p.Stock,
-        //                Price = p.Price,
-        //                ImageData = p.ImageData,
-        //                Description = p.Description,
-        //                CategoryNames = p.Categories.Select(c => c.Name).ToList(),
-        //                CreatedDate = p.CreatedDate,
-        //                UpdatedDate = p.UpdatedDate
-        //            });
+        public async Task<bool> UpdateProduct(int id, UpdatedProductDto updatedProductDto)
+        {
+            var existingProduct = await context.Products.FirstOrDefaultAsync(p => p.Id == id); 
 
-        //        return await dbProducts.ToListAsync();
-        //    });
+            if (existingProduct == null)
+            {
+                throw new ArgumentNullException("categories", "Category list is null.");
+            }
 
-        //    if (products is null)
-        //    {
-        //        throw new NotImplementedException();
-        //    }
+            existingProduct.Name = updatedProductDto.Name;
+            existingProduct.Description = updatedProductDto.Description;
+            existingProduct.Stock = updatedProductDto.Stock;
+            existingProduct.Price = updatedProductDto.Price;
+            existingProduct.ImageData = updatedProductDto.imageData;
 
-        //    return products;
-        //}
+            await context.SaveChangesAsync();
+            ExportToDocument();
 
+            return true;
+        }
     }
 }

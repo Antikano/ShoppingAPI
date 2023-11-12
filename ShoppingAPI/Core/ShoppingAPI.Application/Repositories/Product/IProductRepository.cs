@@ -1,12 +1,7 @@
 ﻿using ShoppingAPI.Application.DTOs;
 using ShoppingAPI.Domain.DTOs;
 using ShoppingAPI.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShoppingAPI.Application.Repositories.Productt
 {
@@ -16,8 +11,9 @@ namespace ShoppingAPI.Application.Repositories.Productt
 
         //public Task<List<ProductWithCategoryNamesDTO>> GetProductsWithCategoryAsync();
         public Task AddProductWithCategories(DTOs.CreatedProductDto p);
-
         public void ExportToDocument();
+
+        public Task<bool> UpdateProduct(int id, UpdatedProductDto updatedProductDto);
 
     }
 }

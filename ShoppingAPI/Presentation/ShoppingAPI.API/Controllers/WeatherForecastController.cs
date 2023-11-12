@@ -36,15 +36,5 @@ namespace ShoppingAPI.API.Controllers
 
             return Ok(product);
         }
-
-        //[HttpGet]
-        //public async Task deneme()
-        //{
-        //    await _productRepository.AddAsync(new() {Name= "Canon EOS 80D",
-        //        Description= "Advanced DSLR camera for professional photographers",
-        //    Category= "Electronics", Stock=48, Price=1400
-        //    });
-        //}
-
     }
 }

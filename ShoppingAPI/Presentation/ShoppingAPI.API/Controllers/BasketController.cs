@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ShoppingAPI.Application.DTOs;
 using ShoppingAPI.Application.Repositories.Baskett;
-using ShoppingAPI.Domain.Entities;
 
 namespace ShoppingAPI.API.Controllers
 {
@@ -35,7 +33,7 @@ namespace ShoppingAPI.API.Controllers
         public IActionResult UpdateBasket(int id, [FromBody] UpdatedBasketDto updatedBasket)
         {
 
-            _basketRepository.updateBasket(id,updatedBasket);
+            _basketRepository.updateBasket(id, updatedBasket);
 
             return Ok();
         }
@@ -48,13 +46,7 @@ namespace ShoppingAPI.API.Controllers
 
             _basketRepository.ExportToDocument(orderDto);
 
-
-
             return Ok();
         }
-
-
-
-
     }
 }

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using ShoppingAPI.Application.Abstraction.Services;
 using ShoppingAPI.Application.Repositories.Categoryy;
 using ShoppingAPI.Domain.Entities;
-using ShoppingAPI.Infrastructure.Services.Caching;
+using ShoppingAPI.Infrastructure.Caching;
 
 namespace ShoppingAPI.API.Controllers
 {
@@ -13,48 +13,19 @@ namespace ShoppingAPI.API.Controllers
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryRepository _categoryRepository;
-        //private readonly ICacheService _cacheService;
 
-        public CategoryController(ICategoryRepository categoryRepository/*, ICacheService cacheService*/)
+        public CategoryController(ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
-            //_cacheService = cacheService;
-           
         }
 
         [HttpGet]
         public IActionResult GetAllProducts()
         {
-            var categories = _categoryRepository.GetAll();
-
-            if (categories is null)
-                return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluştu.");
+            var categories = _categoryRepository.getCategoriesFromRedis();
 
             return Ok(categories);
         }
-
-
-        //[HttpGet]
-        //public async Task<IActionResult> GetAllProducts()
-        //{
-
-        //    var categories = await _cacheService.GetOrAddAsync<List<Category>>("categories", async () =>
-        //    {
-
-        //        var dbCategories = await _categoryRepository.GetAllAsync();
-
-
-        //        return await dbCategories.ToListAsync();
-        //    });
-
-
-        //    if (categories is null)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluştu.");
-        //    }
-        //    return Ok(categories);
-        //}
-
 
     }
 }

@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ShoppingAPI.Application.Abstraction.Services;
 using ShoppingAPI.Application.DTOs;
 

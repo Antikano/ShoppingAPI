@@ -1,27 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using ShoppingAPI.Application.Repositories.Baskett;
 using ShoppingAPI.Application.Repositories.Categoryy;
 using ShoppingAPI.Application.Repositories.Productt;
 using ShoppingAPI.Domain.Entities.Identity;
 using ShoppingAPI.Persistence.Contexts;
 using ShoppingAPI.Persistence.Repositories.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShoppingAPI.Persistence
 {
     public static class ConfigureServices
     {
-        public static void AddPersistenceServices(this IServiceCollection services)
+        public static void AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ShoppingAPIDbContext>(option =>
-                option.UseSqlServer
-                (@"Server=DESKTOP-CQ6T5PI;Database=ShoppingApiDB;
-                Trusted_Connection=True;Encrypt=False;")); // connectionstring 'i düzelt !
+                option.UseSqlServer(configuration.GetConnectionString("DbContextCS")));
 
             services.AddIdentity<AppUser, AppRole>(options =>
             {
@@ -32,13 +27,10 @@ namespace ShoppingAPI.Persistence
                 options.Password.RequireUppercase = false;
             }).AddEntityFrameworkStores<ShoppingAPIDbContext>();
 
-
             services.AddScoped<IProductRepository, EfProductRepository>();
             services.AddScoped<ICategoryRepository, EfCategoryRepository>();
             services.AddScoped<IBasketRepository, EfBasketRepository>();
 
         }
-
-
     }
 }

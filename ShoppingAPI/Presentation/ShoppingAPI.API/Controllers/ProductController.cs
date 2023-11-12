@@ -4,14 +4,12 @@ using ShoppingAPI.Application.DTOs;
 using ShoppingAPI.Application.Repositories.Categoryy;
 using ShoppingAPI.Application.Repositories.Productt;
 
-using ShoppingAPI.Domain.Entities;
-
 namespace ShoppingAPI.API.Controllers
 {
 
     [ApiController]
     [Route("api/[controller]")]
-    
+
     public class ProductController : ControllerBase
     {
         readonly private IProductRepository _productRepository;
@@ -29,7 +27,7 @@ namespace ShoppingAPI.API.Controllers
             var product = await _productRepository.GetAsync(p => p.Id == id);
 
             if (product is null)
-                return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluştu.");        
+                return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluştu.");
 
             return Ok(product);
         }
@@ -57,18 +55,6 @@ namespace ShoppingAPI.API.Controllers
             return Ok(products);
         }
 
-
-        //[HttpGet("withCategoryNamee")]
-        //public async Task<IActionResult> GetAllProductsWithCategoryNamee()
-        //{
-        //    var products = await _productRepository.GetProductsWithCategoryAsync();
-
-        //    if (products is null)
-        //        return StatusCode(StatusCodes.Status500InternalServerError, "Bir hata oluştu.");
-
-        //    return Ok(products);
-        //}
-
         [HttpPost]
         public async Task<IActionResult> Post(CreatedProductDto p)
         {
@@ -79,7 +65,7 @@ namespace ShoppingAPI.API.Controllers
             }
             catch (Exception ex)
             {
-               
+
                 return StatusCode(500, ex.Message);
             }
         }
@@ -87,42 +73,14 @@ namespace ShoppingAPI.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, UpdatedProductDto updatedProductDto)
         {
-            var existingProduct = await _productRepository.GetAsync(p => p.Id == id);
+           var den = await _productRepository.UpdateProduct(id, updatedProductDto);
 
-            if (existingProduct == null)
+            if (den is false)
             {
-                return NotFound(); 
+                throw new Exception();
             }
 
-            
-            existingProduct.Name = updatedProductDto.Name;
-            existingProduct.Description = updatedProductDto.Description;
-            existingProduct.Stock = updatedProductDto.Stock;
-            existingProduct.Price = updatedProductDto.Price;
-            existingProduct.ImageData = updatedProductDto.imageData;
-
-
-            //existingProduct.Categories.Clear(); 
-
-            //foreach (var categoryName in updatedProductDto.Categories)
-            //{
-            //    var category = await _categoryRepository.GetAsync(c => c.Name == categoryName.Name);
-
-            //    if (category != null)
-            //    {
-            //        existingProduct.Categories.Add(category);
-            //    }
-            //}
-
-
-            await _productRepository.SaveAsync();
-
-            _productRepository.ExportToDocument();
-
-            return Ok(); 
+            return Ok();
         }
-
-
-
     }
 }
